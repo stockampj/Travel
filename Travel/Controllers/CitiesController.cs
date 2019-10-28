@@ -18,10 +18,15 @@ namespace Travel.Controllers
         }
 
         // GET api/animals
-        [HttpGet("{id}")]
-        public ActionResult<City> Get(int id)
+        [HttpGet]
+        public ActionResult<IEnumerable<City>> Get(string cityName)
         {
-            return _db.Cities.FirstOrDefault(entry => entry.CityId == id);
+            var query = _db.Cities.AsQueryable();
+            if(cityName != null)
+            {
+              query = query.Where(entry => entry.CityName == cityName);
+            }
+            return query.ToList();
         }
         // POST api/animals
         [HttpPost]
