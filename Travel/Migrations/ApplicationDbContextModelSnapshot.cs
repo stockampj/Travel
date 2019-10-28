@@ -24,6 +24,8 @@ namespace Travel.Migrations
 
                     b.Property<int>("CountryId");
 
+                    b.Property<double>("Rating");
+
                     b.HasKey("CityId");
 
                     b.HasIndex("CountryId");
@@ -35,61 +37,71 @@ namespace Travel.Migrations
                         {
                             CityId = 3,
                             CityName = "Los Angelos",
-                            CountryId = 1
+                            CountryId = 1,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 4,
                             CityName = "Paris",
-                            CountryId = 2
+                            CountryId = 2,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 5,
                             CityName = "Venice",
-                            CountryId = 3
+                            CountryId = 3,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 6,
                             CityName = "Hong Kong",
-                            CountryId = 4
+                            CountryId = 4,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 7,
                             CityName = "London",
-                            CountryId = 5
+                            CountryId = 5,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 8,
                             CityName = "Delhi",
-                            CountryId = 6
+                            CountryId = 6,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 9,
                             CityName = "Nairobi",
-                            CountryId = 7
+                            CountryId = 7,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 10,
                             CityName = "Bali",
-                            CountryId = 8
+                            CountryId = 8,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 11,
                             CityName = "Brasilia",
-                            CountryId = 9
+                            CountryId = 9,
+                            Rating = 0.0
                         },
                         new
                         {
                             CityId = 12,
                             CityName = "Portland",
-                            CountryId = 1
+                            CountryId = 1,
+                            Rating = 0.0
                         });
                 });
 

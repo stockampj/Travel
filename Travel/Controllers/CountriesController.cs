@@ -26,6 +26,7 @@ namespace Travel.Controllers
             {
               query = query
                 .Include(country => country.Cities)
+                .ThenInclude(city => city.Reviews)
                 .Where(entry => entry.CountryName == countryName);
             }
             return query.ToList();

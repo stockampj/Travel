@@ -23,11 +23,12 @@ namespace Travel.Controllers
         public ActionResult<IEnumerable<City>> Get(string cityName)
         {
             var query = _db.Cities.AsQueryable();
+
             if(cityName != null)
             {
               query = query
                 .Include(city => city.Reviews)
-                .Where(entry => entry.CityName.ToLower() == cityName.ToLower());
+                .Where(entry => entry.CityName.ToLower().Replace(" ", "") == cityName.ToLower().Replace(" ", ""));
             }
 
             return query.ToList();
@@ -38,6 +39,7 @@ namespace Travel.Controllers
         {
             _db.Cities.Add(city);
             _db.SaveChanges();
+            
         }
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] City city)

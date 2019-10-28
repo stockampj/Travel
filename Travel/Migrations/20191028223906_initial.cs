@@ -39,6 +39,7 @@ namespace Travel.Migrations
                     CityId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     CityName = table.Column<string>(nullable: true),
+                    Rating = table.Column<double>(nullable: false),
                     CountryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -177,53 +178,53 @@ namespace Travel.Migrations
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 3, "Los Angelos", 1 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 3, "Los Angelos", 1, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 12, "Portland", 1 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 12, "Portland", 1, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 4, "Paris", 2 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 4, "Paris", 2, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 5, "Venice", 3 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 5, "Venice", 3, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 6, "Hong Kong", 4 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 6, "Hong Kong", 4, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 7, "London", 5 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 7, "London", 5, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 8, "Delhi", 6 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 8, "Delhi", 6, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 9, "Nairobi", 7 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 9, "Nairobi", 7, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 10, "Bali", 8 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 10, "Bali", 8, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "CityName", "CountryId" },
-                values: new object[] { 11, "Brasilia", 9 });
+                columns: new[] { "CityId", "CityName", "CountryId", "Rating" },
+                values: new object[] { 11, "Brasilia", 9, 0.0 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
