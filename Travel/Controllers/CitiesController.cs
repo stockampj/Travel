@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Travel.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Travel.Controllers
 {
@@ -24,8 +25,11 @@ namespace Travel.Controllers
             var query = _db.Cities.AsQueryable();
             if(cityName != null)
             {
-              query = query.Where(entry => entry.CityName == cityName);
+              query = query
+                .Include(city => city.Reviews)
+                .Where(entry => entry.CityName.ToLower() == cityName.ToLower());
             }
+
             return query.ToList();
         }
         // POST api/animals

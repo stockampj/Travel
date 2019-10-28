@@ -16,6 +16,8 @@ namespace Travel.Models
 
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<User> Users {get; set;}
+        public DbSet<Review> Reviews {get; set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -44,6 +46,34 @@ namespace Travel.Models
                     new Country {CountryId = 7, CountryName = "Kenya"},
                     new Country {CountryId = 8, CountryName = "Indonesia"},
                     new Country {CountryId = 9, CountryName = "Brasil"}
+                );
+
+            builder.Entity<User>()
+                .HasData(
+                    new User {UserId = 3, UserName = "Dom"},
+                    new User {UserId = 4, UserName = "Jen"},
+                    new User {UserId = 5, UserName = "Anita"},
+                    new User {UserId = 6, UserName = "Devin"},
+                    new User {UserId = 7, UserName = "Hailey"},
+                    new User {UserId = 8, UserName = "Neha"},
+                    new User {UserId = 9, UserName = "Joel"},
+                    new User {UserId = 10, UserName = "Kira"},
+                    new User {UserId = 11, UserName = "Molly"},
+                    new User {UserId = 12, UserName = "Sofia"}
+                );
+
+            builder.Entity<Review>()
+                .HasData(
+                    new Review {ReviewId = 3, Rating = 3, UserId = 3, CityId = 3, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 4, Rating = 3, UserId = 3, CityId = 3, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 5, Rating = 3, UserId = 4, CityId = 6, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 6, Rating = 3, UserId = 4, CityId = 7, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 7, Rating = 3, UserId = 5, CityId = 10, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 8, Rating = 3, UserId = 7, CityId = 12, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 9, Rating = 3, UserId = 8, CityId = 4, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 10, Rating = 3, UserId = 12, CityId = 5, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 11, Rating = 3, UserId = 10, CityId = 5, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"},
+                    new Review {ReviewId = 12, Rating = 3, UserId = 6, CityId = 9, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero"}
                 );
         }
     }
