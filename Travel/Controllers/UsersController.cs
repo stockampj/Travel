@@ -1,54 +1,42 @@
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Travel.Models;
-using Microsoft.EntityFrameworkCore;
+using Travel.Services;
+using Travel.Entities;
 using System;
 
 namespace Travel.Controllers
 {
-    [Route("api/[controller]")]
+  [Authorize]
     [ApiController]
+    [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        private ApplicationDbContext _db;
+        private IUserService _userService;
 
-        public UsersController(ApplicationDbContext db)
+        public UsersController(IUserService userService)
         {
-            _db = db;
+            _userService = userService;
         }
 
-        // GET api/animals
-        [HttpGet]
-        public ActionResult<IEnumerable<User>> Get(string userName)
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate([FromBody]User userParam)
         {
-            var query = _db.Users
-                .Include(user => user.Reviews)
-                .AsQueryable();
-
-            if(userName != null)
-            {
-              query = query
-                .Include(user => user.Reviews)
-                .Where(entry => entry.UserName.ToLower().Replace(" ", "") == userName.ToLower().Replace(" ", ""));
-            }
-
-            return query.ToList();
-        }
-        // POST api/animals
-        [HttpPost]
-        public void Post([FromBody] User user)
-        {
-            _db.Users.Add(user);
-            _db.SaveChanges();
+            var user = _userService.Authenticate(userParam.Username, userParam.Password);
             
+
+            if (user == null)
+                return BadRequest(new { message = "Username or password is incorrect" });
+
+            return Ok(user);
         }
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User user)
+        
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            user.UserId = id;
-            _db.Entry(user).State = EntityState.Modified;
-            _db.SaveChanges();
+            var users =  _userService.GetAll();
+            return Ok(users);
         }
     }
 }
