@@ -46,13 +46,44 @@ namespace Travel.Controllers
         {
             _db.Reviews.Add(review);
             _db.SaveChanges();
-            
+
+
+            List<Review> reviews = _db.Reviews
+                .Where(entry => entry.CityId == review.CityId)
+                .ToList();
+            double ratingSum = 0;
+            foreach (Review entry in reviews)
+            {
+                ratingSum+= entry.Rating;
+            }
+            double average = ratingSum/reviews.Count;
+            City cityToUpdate = _db.Cities
+                .FirstOrDefault(city => city.CityId == review.CityId);
+            cityToUpdate.Rating = average;
+            _db.Entry(cityToUpdate).State = EntityState.Modified;
+            _db.SaveChanges();
+
         }
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Review review)
         {
             review.ReviewId = id;
             _db.Entry(review).State = EntityState.Modified;
+            _db.SaveChanges();
+
+            List<Review> reviews = _db.Reviews
+                .Where(entry => entry.CityId == review.CityId)
+                .ToList();
+            double ratingSum = 0;
+            foreach (Review entry in reviews)
+            {
+                ratingSum+= entry.Rating;
+            }
+            double average = ratingSum/reviews.Count;
+            City cityToUpdate = _db.Cities
+                .FirstOrDefault(city => city.CityId == review.CityId);
+            cityToUpdate.Rating = average;
+            _db.Entry(cityToUpdate).State = EntityState.Modified;
             _db.SaveChanges();
         }
         [HttpDelete("{id}")]

@@ -191,7 +191,7 @@ namespace Travel.Migrations
                             ReviewId = 3,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 3,
-                            Rating = 3.0,
+                            Rating = 2.0,
                             UserId = 3
                         },
                         new
@@ -199,7 +199,7 @@ namespace Travel.Migrations
                             ReviewId = 4,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 3,
-                            Rating = 3.0,
+                            Rating = 4.0,
                             UserId = 3
                         },
                         new
@@ -207,7 +207,7 @@ namespace Travel.Migrations
                             ReviewId = 5,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 6,
-                            Rating = 3.0,
+                            Rating = 5.0,
                             UserId = 4
                         },
                         new
@@ -223,7 +223,7 @@ namespace Travel.Migrations
                             ReviewId = 7,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 10,
-                            Rating = 3.0,
+                            Rating = 1.0,
                             UserId = 5
                         },
                         new
@@ -231,7 +231,7 @@ namespace Travel.Migrations
                             ReviewId = 8,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 12,
-                            Rating = 3.0,
+                            Rating = 2.0,
                             UserId = 7
                         },
                         new
@@ -239,7 +239,7 @@ namespace Travel.Migrations
                             ReviewId = 9,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 4,
-                            Rating = 3.0,
+                            Rating = 4.0,
                             UserId = 8
                         },
                         new
@@ -247,7 +247,7 @@ namespace Travel.Migrations
                             ReviewId = 10,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 5,
-                            Rating = 3.0,
+                            Rating = 5.0,
                             UserId = 12
                         },
                         new
@@ -255,7 +255,7 @@ namespace Travel.Migrations
                             ReviewId = 11,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             CityId = 5,
-                            Rating = 3.0,
+                            Rating = 4.0,
                             UserId = 10
                         },
                         new
