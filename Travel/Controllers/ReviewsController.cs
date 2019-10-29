@@ -60,6 +60,7 @@ namespace Travel.Controllers
             City cityToUpdate = _db.Cities
                 .FirstOrDefault(city => city.CityId == review.CityId);
             cityToUpdate.Rating = average;
+            cityToUpdate.ReviewCount = reviews.Count;
             _db.Entry(cityToUpdate).State = EntityState.Modified;
             _db.SaveChanges();
 

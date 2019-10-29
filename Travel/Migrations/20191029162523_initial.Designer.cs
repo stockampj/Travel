@@ -8,7 +8,7 @@ using Travel.Models;
 namespace Travel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191029151905_initial")]
+    [Migration("20191029162523_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,8 @@ namespace Travel.Migrations
 
                     b.Property<double>("Rating");
 
+                    b.Property<int>("ReviewCount");
+
                     b.HasKey("CityId");
 
                     b.HasIndex("CountryId");
@@ -40,70 +42,80 @@ namespace Travel.Migrations
                             CityId = 3,
                             CityName = "Los Angelos",
                             CountryId = 1,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 4,
                             CityName = "Paris",
                             CountryId = 2,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 5,
                             CityName = "Venice",
                             CountryId = 3,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 6,
                             CityName = "Hong Kong",
                             CountryId = 4,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 7,
                             CityName = "London",
                             CountryId = 5,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 8,
                             CityName = "Delhi",
                             CountryId = 6,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 9,
                             CityName = "Nairobi",
                             CountryId = 7,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 10,
                             CityName = "Bali",
                             CountryId = 8,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 11,
                             CityName = "Brasilia",
                             CountryId = 9,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         },
                         new
                         {
                             CityId = 12,
                             CityName = "Portland",
                             CountryId = 1,
-                            Rating = 0.0
+                            Rating = 0.0,
+                            ReviewCount = 0
                         });
                 });
 

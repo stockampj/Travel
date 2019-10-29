@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 namespace Travel.Models
 {
     public class User
@@ -7,8 +8,9 @@ namespace Travel.Models
         {
             this.Reviews = new HashSet<Review>();
         }
-        public string UserName {get; set;}
         public int UserId {get; set;}
+        [Required(ErrorMessage = "you must have a username")]
+        public string UserName {get; set;}
         public ICollection<Review> Reviews {get;}
     }
 }
